@@ -112,4 +112,8 @@ ul {
   .input label i {
     font-size: 1rem;
   }
+
+  .image {
+    margin-top: 15%;
+  }
 }
