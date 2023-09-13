@@ -60,7 +60,7 @@ body {
 }
 
 .image {
-  margin-top: 7%;
+  margin-top: 15%;
   width: 100%; /* Adjust to 100% for responsiveness */
   max-width: 48rem; /* Added max-width for larger screens */
   height: auto; /* Adjusted height for responsiveness */
