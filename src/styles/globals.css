@@ -1,27 +1,115 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=Poppins:wght@400;500;600;700&display=swap");
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --border: #363636;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  background: rgb(14, 25, 36);
+  font-size: 1.2rem;
+  color: #6c7983;
+}
+
+.header {
+  position: fixed;
+  padding: 1rem 2rem; /* Reduced padding for smaller screens */
+  width: 100%;
+  min-height: 10vh;
+  background: rgb(0, 0, 0, 0);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem; /* Reduced gap for smaller screens */
+}
+
+.header h1 {
+  font-size: 2rem; /* Adjust font size for smaller screens */
+  font-weight: 700; /* Adjust font weight for smaller screens */
+  color: white;
+}
+
+.header .input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list {
+  color: white;
+  text-align: center;
+}
+
+.input label {
+  padding: 0.5rem 1rem; /* Reduced padding for smaller screens */
+  border-radius: 0.5rem;
+  border: 2px solid var(--border);
+  cursor: pointer;
+}
+
+.input label i {
+  font-size: 1.2rem; /* Adjust font size for smaller screens */
+}
+
+.image {
+  margin-top: 7%;
+  width: 100%; /* Adjust to 100% for responsiveness */
+  max-width: 48rem; /* Added max-width for larger screens */
+  height: auto; /* Adjusted height for responsiveness */
+  background: rgb(88, 88, 88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+.image:hover {
+  box-shadow: 2px 4px 7px rgba(0, 0, 0, 0.13);
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.5rem;
+}
+
+.list-li {
+  background: red;
+}
+
+ul {
+  margin-bottom: 10%;
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .input label {
+    padding: 0.5rem;
+  }
+
+  .input label i {
+    font-size: 1rem;
+  }
 }
